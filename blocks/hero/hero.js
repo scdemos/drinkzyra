@@ -19,7 +19,7 @@ export default function decorate(block) {
     block.classList.add('no-image');
   }
 
-  const h1 = block.querySelector('h1');
+  const h1 = block.querySelector('h1, h2');
   if (!h1) return;
 
   // Find the first <p> that appears before the <h1> in the DOM and mark it as a tagline

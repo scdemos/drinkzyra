@@ -744,3 +744,50 @@ main > .section.warm {
 .library-metadata-wrapper {
   display: none;
 }
+
+/* Section style: eyebrows. A short paragraph above a heading (or above lead copy) becomes a small gold overline. */
+.section.eyebrows .default-content-wrapper > p:has(+ :is(h1, h2)),
+.section.eyebrows .default-content-wrapper > p:first-child:has(+ p) {
+  margin: 0 0 var(--space-s);
+  color: var(--color-gold);
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* Section style: light-scheme. Band that stays light inside a dark page (text recolours too). */
+.section.light-scheme {
+  color: var(--text-color);
+  color-scheme: light;
+}
+
+.section.light-scheme :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--text-color);
+}
+
+/* Fragments render their own sections inside the host, so centre them too */
+.fragment .section.center .default-content-wrapper {
+  text-align: center;
+}
+
+.fragment .section.center h2::after {
+  margin-inline: auto;
+}
+
+/* Icon link lists (social handles): a centred row without bullets */
+.default-content-wrapper > ul:has(> li > a > .icon) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-l);
+  padding: 0;
+  list-style: none;
+}
+
+.default-content-wrapper > ul:has(> li > a > .icon) .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: var(--space-xs);
+  vertical-align: middle;
+}

@@ -344,3 +344,34 @@ main .hero.banner.block > div:first-child picture img {
     padding: 80px max(var(--content-padding-inline), calc((100vw - 1200px) / 2));
   }
 }
+
+/* Bare banner: image only, at its natural proportions; the h1 stays for screen readers and SEO */
+main .hero.banner.bare.block > div:first-child picture img {
+  width: 100%;
+  min-height: 0;
+  max-height: none;
+  aspect-ratio: 1425 / 900;
+}
+
+.hero.banner.bare.block > div:first-child::after {
+  display: none;
+}
+
+.hero.banner.bare.block > div:last-child {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+/* Banner with an h2 (pages that keep their single h1 elsewhere) */
+.hero.banner.block h2 {
+  margin: 0 0 var(--space-m);
+  font-family: var(--heading-font-family);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--color-light);
+}
