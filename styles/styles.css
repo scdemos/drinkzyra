@@ -52,16 +52,16 @@
    */
 
   /* heritage palette */
-  --color-rust: #a14f2b;
-  --color-gold: #c5a059;
-  --color-parchment: #f5f2ed;
-  --color-ink: #1a1a1a;
+  --color-rust: #ffb503;
+  --color-gold: #ffb503;
+  --color-parchment: #fafafa;
+  --color-ink: #18181a;
 
   /* heritage dark palette */
-  --color-obsidian: #060d0d;
-  --color-card-dark: #162121;
-  --color-rust-bright: #d16a3e;
-  --color-muted: #8b9a9a;
+  --color-obsidian: #000;
+  --color-card-dark: #18181a;
+  --color-rust-bright: #ffc533;
+  --color-muted: #9c9c9c;
 
   /* BRAND TOKENS:end */
 
