@@ -9,7 +9,9 @@
   gap: 16px;
   padding: 20px 0;
   cursor: pointer;
-  font-weight: 600;
+  font-family: var(--heading-font-family);
+  font-size: 1.35rem;
+  font-weight: 500;
   list-style: none;
 }
 

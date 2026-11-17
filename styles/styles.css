@@ -140,6 +140,7 @@
   --heading-font-size-xs: 18px;
   --heading-font-size-xxs: 16px;
   --heading-line-height: 1.15;
+  --h2-accent-display: none;
 
   /* body sizes */
   --body-font-size-xxxl: 25px;
@@ -813,8 +814,8 @@ body.nav-layout-center main > .section:first-child:not(.hero-container) {
   margin-inline: auto;
 }
 
-.section.narrow > .default-content-wrapper {
-  max-width: 40rem;
+.section.narrow > div {
+  max-width: 46rem;
 }
 
 /* stylelint-enable no-descending-specificity */
@@ -929,3 +930,122 @@ body.nav-layout-center main > .section:first-child:not(.hero-container) {
 }
 
 /* stylelint-enable no-descending-specificity */
+
+/* stylelint-disable no-descending-specificity -- page-composition styles follow the base section rules */
+
+/* Eyebrows carry the short gold rule (headings do not) */
+.section.eyebrows .default-content-wrapper > p:has(+ :is(h1, h2))::after {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2px;
+  margin-top: 0.6rem;
+  background: var(--color-gold);
+}
+
+.section.center.eyebrows .default-content-wrapper > p:has(+ :is(h1, h2))::after {
+  margin-inline: auto;
+}
+
+/* An image under centred lead copy keeps a modest width */
+.section.center .default-content-wrapper > p > picture {
+  display: block;
+  max-width: 520px;
+  margin: var(--space-xl) auto 0;
+}
+
+/* Section style: prose. Legal and long-form text: small headings, quiet copy. */
+.section.prose h2 {
+  margin-top: 2.5rem;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.section.prose p {
+  font-size: var(--body-font-size-s);
+  color: var(--color-muted);
+}
+
+/* Section style: kicker-headings. Headings read as small gold group labels. */
+.section.kicker-headings h2 {
+  margin: 3rem 0 0.5rem;
+  color: #7a5a00;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+/* Section style: quiet-headings. Group titles in plain gold body type. */
+.section.quiet-headings h2 {
+  margin-bottom: 0.25rem;
+  color: var(--color-gold);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+.section.quiet-headings .default-content-wrapper > p {
+  font-size: var(--body-font-size-s);
+  color: var(--color-muted);
+}
+
+/* Section style: product-intro. Bottle beside the title block. */
+.section.product-intro .columns img {
+  max-width: 360px;
+  margin-inline: auto;
+}
+
+.section.product-intro .columns h1 {
+  text-transform: uppercase;
+}
+
+/* Section style: pager. Previous / all / next strip. */
+.section.pager .columns > div > div:nth-child(2) {
+  text-align: center;
+}
+
+.section.pager .columns > div > div:nth-child(3) {
+  text-align: right;
+}
+
+.section.pager p {
+  margin: 0;
+}
+
+.section.pager p:first-child {
+  color: var(--color-gold);
+  font-size: var(--body-font-size-xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* stylelint-enable no-descending-specificity */
+
+/* Section style: split. Text on the left, the form block on the right (stacked below 900px). */
+@media (width >= 900px) {
+  .section.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    max-width: 1100px;
+    margin-inline: auto;
+    gap: var(--space-xl);
+  }
+
+  .section.split > div {
+    max-width: none;
+  }
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.section.split .form form {
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+}

@@ -375,3 +375,17 @@ main .hero.banner.bare.block > div:first-child picture img {
   line-height: 1.05;
   color: var(--color-light);
 }
+
+/* Centred banner: eyebrow, title and lead centred over the photo */
+.hero.banner.center.block > div:last-child > div {
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.hero.banner.center.block h1 {
+  font-family: var(--heading-font-family);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.05;
+}

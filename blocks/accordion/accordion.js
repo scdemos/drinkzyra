@@ -4,7 +4,7 @@
  * @param {Element} block
  */
 export default function decorate(block) {
-  [...block.children].forEach((row) => {
+  [...block.children].forEach((row, index) => {
     const [label, body] = [...row.children];
     if (!label || !body) return;
     const details = document.createElement('details');
@@ -14,6 +14,8 @@ export default function decorate(block) {
     content.className = 'accordion-body';
     content.append(...body.childNodes);
     details.append(summary, content);
+    // the first item of each group starts open
+    if (index === 0) details.open = true;
     row.replaceWith(details);
   });
 }
