@@ -91,4 +91,4 @@ then **paste one prompt** into your AI tool. You approve commits once and do the
 **Feedback loop:** each run ends with a retro. When you hit something new, say so. The fix goes
 into the skill, a script check or the base, so the next SC doesn't hit it.
 
-<!-- docs-check: synced-with=b66f81583c26eb4f -->
+<!-- docs-check: synced-with=0a2b3ef1029de1e2 -->

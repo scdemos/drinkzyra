@@ -62,7 +62,7 @@
     "highlight": "accent-highlighted band",
     "divider": "top divider rule",
     "center": "centered content",
-    "light-scheme": "force light color-scheme",
+    "light-scheme": "band that stays light inside a dark page (also resets text colour); combine with light",
     "dark-scheme": "force dark color-scheme",
     "head-row": "heading left, lone link paragraph right (e.g. \"Latest news\" ... \"All news\")",
     "social": "links rendered as raised cards with trailing icon (Stay connected)",
@@ -72,7 +72,8 @@
     "tags": "lists render as pill clouds (browse by tag/category/author, all tags)",
     "band-green": "band modifier: green background",
     "band-purple": "band modifier: purple background",
-    "band-blue": "band modifier: blue background"
+    "band-blue": "band modifier: blue background",
+    "eyebrows": "small gold uppercase overline for a short paragraph that sits above a heading (or above lead copy)"
   },
   "blocks": {
     "hero": {
@@ -81,9 +82,10 @@
         "gold",
         "ink",
         "rust",
-        "no-image"
+        "no-image",
+        "banner bare"
       ],
-      "use": "page-top banner. banner = full-bleed photo, dark scrim, white sans text (corporate/FS sites); default = faded heritage hero"
+      "use": "page-top banner. banner = full-bleed photo, dark scrim, white sans text (corporate/FS sites); default = faded heritage hero; banner bare = image-only full-bleed hero at natural proportions, h1 kept for screen readers; hero text may use h1 or h2"
     },
     "cards": {
       "variants": [
@@ -98,9 +100,11 @@
         "panel emphasis",
         "promo",
         "promo ink",
-        "logos"
+        "logos",
+        "product-lineup",
+        "natural"
       ],
-      "use": "panel = one raised white panel with hairline-separated cells (capabilities, ESG, news; works with/without images); list = rows with date/title/author bylines (paragraph with headshot picture) + thumbnail; switchable adds a grid/list toggle (JS); stats = big figures; text = simple tiles; default = image grid; panel cols-4 = 4-up tiles (anchor nav strips); emphasis = larger headings in panel cells (contact cards); promo = image + text feature tile, ink = dark promo (campaign/outlook callouts); logos = partner/memberships logo wall"
+      "use": "panel = one raised white panel with hairline-separated cells (capabilities, ESG, news; works with/without images); list = rows with date/title/author bylines (paragraph with headshot picture) + thumbnail; switchable adds a grid/list toggle (JS); stats = big figures; text = simple tiles; default = image grid; panel cols-4 = 4-up tiles (anchor nav strips); emphasis = larger headings in panel cells (contact cards); promo = image + text feature tile, ink = dark promo (campaign/outlook callouts); logos = partner/memberships logo wall; product-lineup = centred bottle/product shots on the page background with a pill (ABV) line; natural = images at their own proportions, 3-up (recipe cards, posters)"
     },
     "columns": {
       "variants": [],
@@ -207,6 +211,18 @@
       ],
       "use": "rotating hero/promo slides with prev/next arrows, dots (progress pill when autoplay), keyboard + reduced-motion support. Each row = image cell | content cell.",
       "baseCandidate": true
+    },
+    "accordion": {
+      "level": 5,
+      "variants": [],
+      "use": "FAQ-style items: row = question cell | answer cell; native details/summary, no JS state",
+      "baseCandidate": true
+    },
+    "store-locator": {
+      "level": 5,
+      "variants": [],
+      "use": "row 1 = link to a sheet (/stores.json: name,type,address,carries,hours,phone,lat,lng); search, category filter, use-my-location sort, list + OpenStreetMap embed that follows the selected store",
+      "baseCandidate": true
     }
   },
   "templates": {
@@ -268,6 +284,11 @@
     "login-label / logout-label": {
       "level": 0,
       "use": "metadata overrides for auth link text"
+    },
+    "header nav-layout: center": {
+      "level": 6,
+      "use": "transparent bar floating over the page top; brand centred between two groups of two nav items, tools pinned right; page without hero gets top padding",
+      "baseCandidate": true
     }
   },
   "baseContentMarkers": {

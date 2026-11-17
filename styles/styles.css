@@ -791,3 +791,8 @@ main > .section.warm {
   margin-right: var(--space-xs);
   vertical-align: middle;
 }
+
+/* Centre layout: the header floats over the page top, so a page that opens without a hero clears it */
+body.nav-layout-center main > .section:first-child:not(.hero-container) {
+  padding-top: calc(var(--nav-height) + var(--space-xl));
+}
