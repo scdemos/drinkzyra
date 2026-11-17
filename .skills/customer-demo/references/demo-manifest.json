@@ -102,9 +102,10 @@
         "promo ink",
         "logos",
         "product-lineup",
-        "natural"
+        "natural",
+        "rail"
       ],
-      "use": "panel = one raised white panel with hairline-separated cells (capabilities, ESG, news; works with/without images); list = rows with date/title/author bylines (paragraph with headshot picture) + thumbnail; switchable adds a grid/list toggle (JS); stats = big figures; text = simple tiles; default = image grid; panel cols-4 = 4-up tiles (anchor nav strips); emphasis = larger headings in panel cells (contact cards); promo = image + text feature tile, ink = dark promo (campaign/outlook callouts); logos = partner/memberships logo wall; product-lineup = centred bottle/product shots on the page background with a pill (ABV) line; natural = images at their own proportions, 3-up (recipe cards, posters)"
+      "use": "panel = one raised white panel with hairline-separated cells (capabilities, ESG, news; works with/without images); list = rows with date/title/author bylines (paragraph with headshot picture) + thumbnail; switchable adds a grid/list toggle (JS); stats = big figures; text = simple tiles; default = image grid; panel cols-4 = 4-up tiles (anchor nav strips); emphasis = larger headings in panel cells (contact cards); promo = image + text feature tile, ink = dark promo (campaign/outlook callouts); logos = partner/memberships logo wall; product-lineup = centred bottle/product shots on the page background with a pill (ABV) line; natural = images at their own proportions, 3-up (recipe cards, posters); rail = scroll-snap carousel rail on small screens, announced as a carousel (combine with natural)"
     },
     "columns": {
       "variants": [],

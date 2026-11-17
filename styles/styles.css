@@ -1091,4 +1091,9 @@ main p.button-container:has(> a.button:not(.primary, .secondary)) {
   text-transform: uppercase;
 }
 
+/* Primary buttons inside dark bands keep dark text (the band rule would otherwise make it light on gold) */
+:is(main, article.article-body) > .section.ink a.button.primary:any-link {
+  color: var(--color-obsidian);
+}
+
 /* stylelint-enable no-descending-specificity */

@@ -851,7 +851,7 @@
 
 /* Product lineup carousel: scroll-snap rail on small screens */
 @media (width < 900px) {
-  .cards.product-lineup > ul {
+  :is(.cards.product-lineup, .cards.rail) > ul {
     display: flex;
     max-width: 100%;
     overflow-x: auto;
@@ -859,7 +859,7 @@
     gap: var(--space-m);
   }
 
-  .cards.product-lineup > ul > li {
+  :is(.cards.product-lineup, .cards.rail) > ul > li {
     flex: 0 0 80%;
     scroll-snap-align: center;
   }
