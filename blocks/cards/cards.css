@@ -284,7 +284,7 @@
   align-items: center;
   gap: var(--space-s);
   font-weight: 700;
-  color: var(--color-ink);
+  color: light-dark(var(--color-ink), var(--color-parchment));
   text-decoration: none;
 }
 
@@ -835,5 +835,27 @@
   .cards.natural > ul {
     grid-template-columns: repeat(3, 1fr);
     max-width: 1200px;
+  }
+}
+
+/* Link lines inside cards read as plain sentence-case links */
+.cards .cards-card-body p:last-child a:any-link {
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* Product lineup carousel: scroll-snap rail on small screens */
+@media (width < 900px) {
+  .cards.product-lineup > ul {
+    display: flex;
+    max-width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: var(--space-m);
+  }
+
+  .cards.product-lineup > ul > li {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
   }
 }

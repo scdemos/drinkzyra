@@ -441,8 +441,8 @@ button.button {
   text-transform: uppercase;
   letter-spacing: 2px;
   background-color: light-dark(var(--color-rust), var(--color-rust-bright));
-  background-image: linear-gradient(135deg, rgb(255 255 255 / 12%), rgb(0 0 0 / 8%));
-  color: var(--color-light);
+  background-image: none;
+  color: var(--color-obsidian);
   cursor: pointer;
   overflow: hidden;
   position: relative;
@@ -473,7 +473,7 @@ a.button.primary:any-link,
 button.button.primary {
   border-color: var(--color-rust);
   background-color: var(--color-rust);
-  color: var(--color-light);
+  color: var(--color-obsidian);
 }
 
 a.button:any-link:hover,
@@ -795,4 +795,37 @@ main > .section.warm {
 /* Centre layout: the header floats over the page top, so a page that opens without a hero clears it */
 body.nav-layout-center main > .section:first-child:not(.hero-container) {
   padding-top: calc(var(--nav-height) + var(--space-xl));
+}
+
+/* stylelint-disable no-descending-specificity -- measure rules apply after the section styles above */
+
+/* Centred bands keep their copy to a readable measure; `narrow` does the same for left-aligned text */
+.section.center .default-content-wrapper > p,
+.fragment .section.center .default-content-wrapper > p {
+  max-width: 36rem;
+  margin-inline: auto;
+}
+
+.section.narrow > .default-content-wrapper {
+  max-width: 40rem;
+}
+
+/* stylelint-enable no-descending-specificity */
+
+/* Newsletter sign-off line: capital letters like the original */
+.fragment .section.center h3 {
+  font-size: var(--body-font-size-l);
+  letter-spacing: 0.05em;
+}
+
+/* Eyebrows on a light band need a darker gold to stay readable */
+.section.light-scheme.eyebrows .default-content-wrapper > p:has(+ :is(h1, h2)),
+.section.light-scheme.eyebrows .default-content-wrapper > p:first-child:has(+ p) {
+  color: #7a5a00;
+}
+
+/* Newsletter form keeps a narrow measure, like the original sign-up */
+.fragment .section.center .form {
+  max-width: 36rem;
+  margin-inline: auto;
 }

@@ -196,4 +196,10 @@ export default async function decorate(block) {
     decorateDefault(block);
   }
   if (block.classList.contains('switchable')) addViewToggle(block);
+  if (block.classList.contains('product-lineup')) {
+    // below 900px the lineup is a horizontal scroll-snap carousel; from 900px it is a grid
+    block.classList.add('cards-carousel');
+    block.setAttribute('aria-roledescription', 'carousel');
+    block.setAttribute('aria-label', 'Product lineup');
+  }
 }
