@@ -74,6 +74,7 @@
 
 .cards .cards-card-body :is(h2, h3, h4) {
   margin-top: 0;
+  font-size: 1.375rem;
   line-height: 1.2;
 }
 
