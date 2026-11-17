@@ -800,8 +800,8 @@ body.nav-layout-center main > .section:first-child:not(.hero-container) {
 /* stylelint-disable no-descending-specificity -- measure rules apply after the section styles above */
 
 /* Centred bands keep their copy to a readable measure; `narrow` does the same for left-aligned text */
-.section.center .default-content-wrapper > p,
-.fragment .section.center .default-content-wrapper > p {
+.section.center .default-content-wrapper > :is(h1, h2, h3, p),
+.fragment .section.center .default-content-wrapper > :is(h1, h2, h3, p) {
   max-width: 36rem;
   margin-inline: auto;
 }

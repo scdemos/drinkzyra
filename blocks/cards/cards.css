@@ -345,7 +345,7 @@
 }
 
 .cards.list .cards-card-body :is(h2, h3) a:any-link {
-  color: var(--color-ink);
+  color: light-dark(var(--color-ink), var(--color-parchment));
   text-decoration: none;
 }
 
@@ -405,7 +405,7 @@
 .cards.stats .cards-card-body p {
   margin-top: var(--space-xs);
   font-size: var(--body-font-size-m);
-  color: var(--color-ink);
+  color: light-dark(var(--color-ink), var(--color-parchment));
 }
 
 @media (width >= 900px) {
@@ -460,13 +460,13 @@
   font-size: var(--heading-font-size-l);
   font-weight: 300;
   line-height: 1.2;
-  color: var(--color-ink);
+  color: light-dark(var(--color-ink), var(--color-parchment));
 }
 
 .cards.panel .cards-card-body p {
   font-size: var(--body-font-size-m);
   line-height: 1.6;
-  color: var(--color-ink);
+  color: light-dark(var(--color-ink), var(--color-parchment));
 }
 
 .cards.panel .cards-card-body p:first-child:not(:has(a)) {
@@ -486,7 +486,7 @@
   align-items: center;
   gap: var(--space-s);
   font-weight: 700;
-  color: var(--color-ink);
+  color: light-dark(var(--color-ink), var(--color-parchment));
   text-decoration: none;
 }
 
@@ -567,7 +567,7 @@
   border: 0;
   border-radius: 0;
   background: transparent;
-  color: var(--color-ink);
+  color: light-dark(var(--color-ink), var(--color-parchment));
   cursor: pointer;
 }
 
@@ -629,7 +629,7 @@
   border: 0;
   background: none;
   box-shadow: none;
-  color: var(--color-ink);
+  color: light-dark(var(--color-ink), var(--color-parchment));
   font-weight: 400;
   text-decoration: none;
 }
