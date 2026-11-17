@@ -49,9 +49,14 @@ const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'lh-'));
 function lighthouse(url, factor) {
   const file = path.join(tmp, `r-${Date.now()}.json`);
   try {
-    execFileSync('npx', ['-y', 'lighthouse@12', url, '--quiet', '--output=json', `--output-path=${file}`,
-      '--only-categories=performance,accessibility,best-practices,seo', '--chrome-flags=--headless=new --no-sandbox',
-      ...(factor === 'desktop' ? ['--preset=desktop'] : [])], { env: { ...process.env, CHROME_PATH: chromePath }, stdio: 'ignore', timeout: 180000 });
+    // Windows: npx is npx.cmd, which execFile only finds through a shell (then the spaced flag needs quotes)
+    const win = process.platform === 'win32';
+    const flags = '--chrome-flags=--headless=new --no-sandbox';
+    execFileSync('npx', ['-y', 'lighthouse@12', url, '--quiet', '--output=json', `--output-path=${win ? `"${file}"` : file}`,
+      '--only-categories=performance,accessibility,best-practices,seo', win ? `"${flags}"` : flags,
+      ...(factor === 'desktop' ? ['--preset=desktop'] : [])], {
+      env: { ...process.env, CHROME_PATH: chromePath }, stdio: 'ignore', timeout: 180000, shell: win,
+    });
     return JSON.parse(fs.readFileSync(file, 'utf8'));
   } catch (e) {
     return { error: e.message.split('\n')[0] };
