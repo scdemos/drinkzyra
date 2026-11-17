@@ -1,0 +1,78 @@
+{
+  "topbarTitle": "Zyra Vodka on Edge Delivery Services",
+  "topbarSubtitle": "The drinkzyra.com site rebuilt on AEM Edge Delivery with Document Authoring.",
+  "slides": [
+    {
+      "eyebrowLabel": "The site",
+      "slideTitle": "Same pages, same look, same words",
+      "leadParagraph": "Fourteen real pages of drinkzyra.com: home, our story, the three products, cocktails, blog, events, where to buy, FAQ, contact and privacy.",
+      "bulletPoints": [
+        "Centred-logo header over the hero, with About Us, Products and Media dropdowns",
+        "Zyra black and gold, Jost headings and Figtree body copy",
+        "Cookie banner with the original wording; choices drive Web SDK consent"
+      ],
+      "openInBrowser": [
+        { "buttonText": "Open the home page", "url": "/" },
+        { "buttonText": "Open the original", "url": "https://www.drinkzyra.com/" }
+      ],
+      "keyTakeaways": "A customer site in the customer's own look, built from a shared block library."
+    },
+    {
+      "eyebrowLabel": "Authoring",
+      "slideTitle": "Authors work in documents",
+      "leadParagraph": "Every page is a document in Document Authoring. Open any page in DA and edit it in place, or use Universal Editor.",
+      "bulletPoints": [
+        "The newsletter band is one fragment reused on six pages",
+        "Cocktail cards, product tiles and FAQ items are simple tables",
+        "Section styles such as centre, eyebrows and light give each band its look"
+      ],
+      "openInBrowser": [
+        { "buttonText": "Open in DA", "url": "https://da.live/#/scdemos/drinkzyra" },
+        { "buttonText": "Newsletter fragment", "url": "/fragments/newsletter" }
+      ]
+    },
+    {
+      "eyebrowLabel": "Block library",
+      "slideTitle": "New constructs, ready to drag into any page",
+      "leadParagraph": "Zyra needed a few patterns the base did not have. Each one is generic and lives in the DA block library.",
+      "bulletPoints": [
+        "Hero (bare): image only at its natural proportions",
+        "Cards (product lineup, natural): bottle shots and recipe cards",
+        "Accordion: FAQ items with native details and summary",
+        "Store locator: search, filter and map for 79 Alberta stockists"
+      ],
+      "openInBrowser": [
+        { "buttonText": "Cocktails", "url": "/cocktails" },
+        { "buttonText": "FAQ", "url": "/faq" },
+        { "buttonText": "Where to buy", "url": "/where-to-buy" }
+      ]
+    },
+    {
+      "eyebrowLabel": "Performance",
+      "slideTitle": "Built for a perfect Lighthouse score",
+      "leadParagraph": "No build step and no runtime dependencies. The first section carries the hero image, fonts have metric-matched fallbacks, and third-party scripts load after consent.",
+      "bulletPoints": [
+        "Images are optimised by the media pipeline",
+        "Blocks and styles load only where a page uses them"
+      ]
+    },
+    {
+      "eyebrowLabel": "Search and forms",
+      "slideTitle": "Find a store, join the list, say hello",
+      "leadParagraph": "The store locator filters 79 stores by name or city and sorts by distance. The newsletter and contact forms post to the shared demo endpoint.",
+      "openInBrowser": [
+        { "buttonText": "Where to buy", "url": "/where-to-buy" },
+        { "buttonText": "Contact", "url": "/contact" }
+      ]
+    },
+    {
+      "eyebrowLabel": "Next",
+      "slideTitle": "Add an experiment or a campaign",
+      "leadParagraph": "None are running by default. To show one, add Experiment and Experiment Variants to a page's metadata in DA, or a Campaign key pointing at a campaign page, then open the page with the matching URL parameter.",
+      "bulletPoints": [
+        "Experiment: page metadata Experiment and Experiment Variants",
+        "Campaign: page metadata Campaign-<name> set to the campaign page URL"
+      ]
+    }
+  ]
+}
