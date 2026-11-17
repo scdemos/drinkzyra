@@ -1049,3 +1049,46 @@ body.nav-layout-center main > .section:first-child:not(.hero-container) {
   background: none;
   box-shadow: none;
 }
+
+/* stylelint-disable no-descending-specificity -- plain-link rule overrides the button rules above */
+
+/* A link alone in a paragraph is a plain text link; real buttons are authored bold (primary) or italic (secondary) */
+main a.button:any-link:not(.primary, .secondary) {
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  letter-spacing: normal;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  transform: none;
+}
+
+main p.button-container:has(> a.button:not(.primary, .secondary)) {
+  margin: var(--space-s) 0 0;
+}
+
+/* Section style: subhead. The paragraph under the title is a larger, softer line. */
+.section.subhead .default-content-wrapper > p:not(:has(+ :is(h1, h2))) {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  opacity: 0.75;
+}
+
+/* Section style: notes. A row of short labelled facts (nose, palate, finish). */
+.section.notes .columns > div > div {
+  text-align: center;
+}
+
+.section.notes .columns p:first-child {
+  color: var(--color-gold);
+  font-size: var(--body-font-size-xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* stylelint-enable no-descending-specificity */

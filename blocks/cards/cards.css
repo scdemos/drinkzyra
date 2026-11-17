@@ -306,7 +306,7 @@
 
 @media (width >= 900px) {
   .cards.text > ul {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
